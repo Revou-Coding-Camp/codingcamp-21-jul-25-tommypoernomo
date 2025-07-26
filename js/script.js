@@ -231,11 +231,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         const dueDate = dateInput.value;
 
         if (!taskText) {
-            await showNotification('Cek isi data', 'Deskripsi tugas tidak boleh kosong.', false);
+            await showNotification('Cek isi nya', 'Deskripsi tugas tidak boleh kosong.', false);
             return;
         }
         if (!dueDate) {
-            await showNotification('Cek isi data', 'Silakan pilih Deadline tugas.', false);
+            await showNotification('Cek isi datanya', 'Silakan pilih Deadline tugas.', false);
             return;
         }
 
