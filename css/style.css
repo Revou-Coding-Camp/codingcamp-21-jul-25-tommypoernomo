@@ -1,0 +1,135 @@
+/* General Body and Font Styling */
+:root {
+    --gradient-start: #4A0079;
+    --gradient-end: #FF7F50;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Modal Styling */
+#notificationModal {
+    background: rgba(255,255,255,0.95);
+    max-width: 400px;
+    align-self: center;
+}
+    padding: 2rem;
+    max-width: 400px;
+    margin: auto;
+}
+
+#notificationModal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content {
+    transform: translateY(-10px);
+    transition: transform 0.3s;
+}
+
+#notificationModal.hidden .modal-content {
+    transform: translateY(-40px);
+}
+
+/* Table Row Hover Effect */
+#taskList tr {
+    transition: background 0.2s;
+}
+#taskList tr:hover {
+    background-color: #f3e8ff;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.3rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 1;
+    display: inline-block;
+    letter-spacing: 0.02em;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.status-badge.pending {
+    background-color: #fef3c7;
+    color: #b45309;
+    border: 1px solid #fde68a;
+}
+
+.status-badge.completed {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f3e8ff;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #a78bfa;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #7c3aed;
+}
+
+/* Firefox scrollbar styling */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #a78bfa #f3e8ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #inputForm,
+    .mb-6.flex {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    #inputForm > *,
+    .mb-6.flex > * {
+        width: 100%;
+    /* If using Tailwind CSS, remove this block and use Tailwind utility classes in your HTML.
+       If you want a custom class, escape the selector properly: */
+    .grid-cols-1\.md\:grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+    .mb-6.flex > *:last-child {
+        margin-bottom: 0;
+    }
+    .grid-cols-1.md\:grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+    .text-3xl {
+        font-size: 2rem;
+    }
+    .p-6 {
+    .px-6 {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .py-3 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+        padding: 0.75rem 1.25rem;
+    }
+}
